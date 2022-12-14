@@ -70,10 +70,24 @@
                                     <action selector="manualBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZoT-0X-pBb"/>
                                 </connections>
                             </button>
-                            <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fDV-Hh-v33">
-                                <rect key="frame" x="160" y="245" width="94" height="32"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2z4-fn-syE">
+                                <rect key="frame" x="212" y="246" width="54" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                <connections>
+                                    <action selector="plusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K1m-07-5Tp"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBY-6C-LRx">
+                                <rect key="frame" x="150" y="246" width="54" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="-"/>
+                                <connections>
+                                    <action selector="minusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZZ-H4-0KG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,6 +97,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="minusBtn" destination="VBY-6C-LRx" id="DBW-Te-VZo"/>
+                        <outlet property="plusBtn" destination="2z4-fn-syE" id="I5F-9E-3VY"/>
                         <outlet property="timeLabel" destination="ngY-T6-D0P" id="1kz-Cg-mYO"/>
                     </connections>
                 </viewController>
