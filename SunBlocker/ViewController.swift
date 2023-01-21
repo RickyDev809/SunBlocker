@@ -13,6 +13,11 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var plusBtn: UIButton!
     @IBOutlet weak var minusBtn: UIButton!
+    @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var autoBtn: UIButton!
+    @IBOutlet weak var customBtn: UIButton!
+    @IBOutlet weak var sweatSwimBtn: UIButton!
     
     var seconds = 0.0
     var timer: Timer?
@@ -20,6 +25,22 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startBtn.layer.cornerRadius = startBtn.frame.width / 2
+        startBtn.layer.masksToBounds = true
+        resetBtn.layer.cornerRadius = resetBtn.frame.width / 2
+        resetBtn.layer.masksToBounds = true
+        autoBtn.layer.cornerRadius = autoBtn.frame.width / 2
+        autoBtn.layer.masksToBounds = true
+        customBtn.layer.cornerRadius = customBtn.frame.width / 2
+        customBtn.layer.masksToBounds = true
+        sweatSwimBtn.layer.cornerRadius = sweatSwimBtn.frame.width / 2
+        sweatSwimBtn.layer.masksToBounds = true
+        
+        sweatSwimBtn.titleLabel?.numberOfLines = 0
+        sweatSwimBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        sweatSwimBtn.titleLabel?.lineBreakMode = .byWordWrapping
+   
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,28 +64,33 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     }
     
     @objc private func applicationDidBecomeActive() {
-        
-        if let lastTimerStartTime = UserDefaults.standard.value(forKey: "lastTimerStartTime") as? Date,
-           let totalTime = UserDefaults.standard.value(forKey: "totalTime") as? Double {
-            let timeSinceStartTime = Date() - lastTimerStartTime
-            if timeSinceStartTime < totalTime {
-                seconds = totalTime - timeSinceStartTime
-                runTimer()
+        if seconds < 1 {
+            timer?.invalidate()
+        } else {
+            if let lastTimerStartTime = UserDefaults.standard.value(forKey: "lastTimerStartTime") as? Date,
+               let totalTime = UserDefaults.standard.value(forKey: "totalTime") as? Double {
+                let timeSinceStartTime = Date() - lastTimerStartTime
+                if timeSinceStartTime < totalTime {
+                    seconds = totalTime - timeSinceStartTime
+                    runTimer()
+                }
             } else {
-                seconds = 0
                 timeLabel.text = timeString(time: TimeInterval(seconds))
             }
-        } else {
-            timeLabel.text = timeString(time: TimeInterval(seconds))
+            notifyTimerCompleted()
         }
-        notifyTimerCompleted()
     }
     
     //This begins the timer after user has selected on of the options of time.
     
     @IBAction func startBtn(_ sender: UIButton) {
-        if isTimerRunning == false {
-            runTimer()
+        
+        if seconds < 1 {
+            timer?.invalidate()
+        } else {
+            if isTimerRunning == false {
+                runTimer()
+            }
             
             UNUserNotificationCenter.current().delegate = self
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { success, _ in
@@ -73,7 +99,10 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
                 }
             }
         }
+        self.plusBtn.isHidden = true
+        self.minusBtn.isHidden = true
     }
+    
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
         isTimerRunning = true
@@ -99,7 +128,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     }
     
     func notifyTimerCompleted() {
-        timeLabel.text = "Reapply!"
+        timeLabel.text = "Apply Suncreen!"
     }
     
     @objc func updateTimer(){
@@ -121,13 +150,17 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         seconds = 0
         timeLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
+        self.plusBtn.isHidden = true
+        self.minusBtn.isHidden = true
     }
+    
+    
     
     // Auto timer sets the timer to 2 hours which is the recommened time to reapply sunscreen.
     
-    @IBAction func autoTimer(_ sender: UIButton) {
+    @IBAction func autoBtn(_ sender: UIButton) {
         timer?.invalidate()
-        seconds = 7200
+        seconds = 3600
         timeLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
         self.plusBtn.isHidden = true
@@ -181,5 +214,3 @@ extension Date {
         return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
     }
 }
-
-
