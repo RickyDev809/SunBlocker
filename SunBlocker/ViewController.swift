@@ -27,6 +27,10 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        // Example
+        UITabBar.appearance().unselectedItemTintColor = .black
+        
         startBtn.layer.cornerRadius = startBtn.frame.width / 2
         startBtn.layer.masksToBounds = true
         resetBtn.layer.cornerRadius = resetBtn.frame.width / 2
