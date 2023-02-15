@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OCl-ql-iY8">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -13,40 +13,47 @@
             <objects>
                 <viewController title="LaunchScreen" id="OCl-ql-iY8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mER-0s-dTK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OF4-mE-eUj">
+                                <rect key="frame" x="0.0" y="59" width="430" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="q1l-67-Gci"/>
+                                    <constraint firstAttribute="width" constant="430" id="vif-lc-CVb"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14i-bV-Za4">
-                                <rect key="frame" x="54" y="403" width="285.33333333333331" height="46"/>
+                                <rect key="frame" x="57.666666666666657" y="428.66666666666669" width="315" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="GNO-ai-5nc"/>
+                                    <constraint firstAttribute="height" constant="75" id="Xal-W9-Hw6"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="SUNBLOCKER">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.70588235290000001" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="40" name="Baskerville-SemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OF4-mE-eUj">
-                                <rect key="frame" x="76" y="59" width="241" height="284"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ha6-O3-5Qi"/>
                         <color key="backgroundColor" red="0.1019607843" green="0.74901960779999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OF4-mE-eUj" firstAttribute="leading" secondItem="Ha6-O3-5Qi" secondAttribute="leading" constant="76" id="Ipv-sA-2Ro"/>
-                            <constraint firstItem="14i-bV-Za4" firstAttribute="centerX" secondItem="mER-0s-dTK" secondAttribute="centerX" id="MfI-ke-akt"/>
-                            <constraint firstItem="OF4-mE-eUj" firstAttribute="centerX" secondItem="14i-bV-Za4" secondAttribute="centerX" id="ctw-Sa-b7F"/>
-                            <constraint firstItem="14i-bV-Za4" firstAttribute="top" secondItem="OF4-mE-eUj" secondAttribute="bottom" constant="60" id="eBP-l7-fKm"/>
-                            <constraint firstItem="14i-bV-Za4" firstAttribute="centerY" secondItem="mER-0s-dTK" secondAttribute="centerY" id="tP1-Da-uJs"/>
-                            <constraint firstItem="OF4-mE-eUj" firstAttribute="top" secondItem="Ha6-O3-5Qi" secondAttribute="top" id="wBx-4c-Ogj"/>
+                            <constraint firstItem="14i-bV-Za4" firstAttribute="centerY" secondItem="mER-0s-dTK" secondAttribute="centerY" id="D3d-91-itE"/>
+                            <constraint firstItem="14i-bV-Za4" firstAttribute="centerX" secondItem="mER-0s-dTK" secondAttribute="centerX" id="HzE-KA-Zlc"/>
+                            <constraint firstItem="OF4-mE-eUj" firstAttribute="top" secondItem="Ha6-O3-5Qi" secondAttribute="top" id="jOU-UP-iIl"/>
+                            <constraint firstItem="OF4-mE-eUj" firstAttribute="centerX" secondItem="mER-0s-dTK" secondAttribute="centerX" id="w6e-Qa-wW8"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9f-1s-eqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478.62595419847327" y="365.49295774647891"/>
+            <point key="canvasLocation" x="476" y="363.86806596701655"/>
         </scene>
     </scenes>
     <resources>
