@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OCl-ql-iY8">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,18 +12,18 @@
             <objects>
                 <viewController title="LaunchScreen" id="OCl-ql-iY8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mER-0s-dTK">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OF4-mE-eUj">
-                                <rect key="frame" x="0.0" y="59" width="430" height="280"/>
+                                <rect key="frame" x="-27.5" y="0.0" width="430" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="q1l-67-Gci"/>
                                     <constraint firstAttribute="width" constant="430" id="vif-lc-CVb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14i-bV-Za4">
-                                <rect key="frame" x="57.666666666666657" y="428.66666666666669" width="315" height="75"/>
+                                <rect key="frame" x="30" y="296" width="315" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="GNO-ai-5nc"/>
                                     <constraint firstAttribute="height" constant="75" id="Xal-W9-Hw6"/>
