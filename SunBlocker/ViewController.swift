@@ -23,6 +23,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     var seconds = 0.0
     var timer: Timer?
     var isTimerRunning = false
+    var allBtn = [startBtn, resetBtn, autoBtn, customBtn, sweatSwimBtn]
     
     override func viewDidLoad() {
         super.viewDidLoad()
