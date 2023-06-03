@@ -23,13 +23,10 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     var seconds = 0.0
     var timer: Timer?
     var isTimerRunning = false
-    var allBtn = [startBtn, resetBtn, autoBtn, customBtn, sweatSwimBtn]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        // Example
         UITabBar.appearance().unselectedItemTintColor = .black
         
         startBtn.layer.cornerRadius = startBtn.frame.width / 2
@@ -45,7 +42,6 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         sweatSwimBtn.titleLabel?.numberOfLines = 0
         sweatSwimBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         sweatSwimBtn.titleLabel?.lineBreakMode = .byWordWrapping
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
