@@ -3,7 +3,7 @@
 
 Welcome to the GitHub repository for my published app SunBlocker! This repository contains all the source code and relevant files for my amazing app.
 
-##**Getting Started**
+#**Getting Started**
 
 You can download the app from app store to try it out. 
 https://apps.apple.com/us/app/sunblocker-sunscreen-timer/id1670183247
