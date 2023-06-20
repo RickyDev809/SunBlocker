@@ -8,8 +8,8 @@ Welcome to the GitHub repository for my published app SunBlocker! This repositor
 *You can download the app from the app store to try it out. 
 https://apps.apple.com/us/app/sunblocker-sunscreen-timer/id1670183247
 
-![FeaturesPic](App Store Pics/1.png)
-![FeaturesPic](App Store Pics/3.png)
+![FeaturesPic](AppStorePics/1.png)
+![FeaturesPic](AppStorePics/3.png)
 
 **Features**
 
