@@ -9,7 +9,6 @@ Welcome to the GitHub repository for my published app SunBlocker! This repositor
 https://apps.apple.com/us/app/sunblocker-sunscreen-timer/id1670183247
 
 ![FeaturesPic](AppStorePics/1.png)
-![FeaturesPic](AppStorePics/3.png)
 
 **Features**
 
