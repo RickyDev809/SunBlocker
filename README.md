@@ -3,12 +3,12 @@
 
 Welcome to the GitHub repository for my published app SunBlocker! This repository contains all the source code and relevant files for my amazing app.
 
-#**Getting Started**
+**Getting Started**
 
 You can download the app from app store to try it out. 
 https://apps.apple.com/us/app/sunblocker-sunscreen-timer/id1670183247
 
-##**Features**
+**Features**
 
 * Sets timer that alerts the user when it's time to reapply sunscreen.
 * Simple interface that will make it easy for user to set a time that works best for them. 
@@ -23,6 +23,6 @@ How to set reminders and notifications
 
 Users must allow the app to send notifications to get alerted when the timer is up. If the user denies giving this access they will not be alerted. This can be changed in the notification setting on the iPhone settings. This is a must or else user will not get notified when the timer is complete. 
 
-##**Support and Feedback**
+**Support and Feedback**
 
 If you encounter any issues or have suggestions for improvement, please open an issue on this repository. I appreciate your feedback and will actively address any concerns.
