@@ -5,8 +5,11 @@ Welcome to the GitHub repository for my published app SunBlocker! This repositor
 
 **Getting Started**
 
-You can download the app from app store to try it out. 
+*You can download the app from app store to try it out. 
 https://apps.apple.com/us/app/sunblocker-sunscreen-timer/id1670183247
+
+![FeaturesPic](App store pics/1.png)
+![FeaturesPic](App store pics/3.png)
 
 **Features**
 
@@ -16,13 +19,10 @@ https://apps.apple.com/us/app/sunblocker-sunscreen-timer/id1670183247
     *Auto timer sets the timer for 2 hours which is the recommended time to reapply sunscreen. 
     *The Swim/sweat button sets the time for 45 minutes which is the recommended time to reapply if you're going for a swim or sweating. 
     *The Custom button allows you to select a time of your choosing to reapply.  
+* Users must allow the app to send notifications to get alerted when the timer is up. If the user denies giving this access they will not be alerted. This can be changed in the notification setting on the iPhone settings.
 * Has a learning section that gives you info on why apply suncreen is important. 
 * MORE FEATURES COMING SOON!
 
-How to set reminders and notifications
-
-Users must allow the app to send notifications to get alerted when the timer is up. If the user denies giving this access they will not be alerted. This can be changed in the notification setting on the iPhone settings. This is a must or else user will not get notified when the timer is complete. 
-
 **Support and Feedback**
 
-If you encounter any issues or have suggestions for improvement, please open an issue on this repository. I appreciate your feedback and will actively address any concerns.
+*If you encounter any issues or have suggestions for improvement, please open an issue on this repository. I appreciate your feedback and will actively address any concerns.
